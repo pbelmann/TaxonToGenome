@@ -52,6 +52,13 @@ Install all libraries with
 pip install -r requirements.txt
 ~~~
 
+You can test the successful installation by running the following command inside the project directory:
+
+~~~BASH
+behave
+~~~
+
+
 ## How to use
 
 ~~~BASH
@@ -64,7 +71,7 @@ optional arguments:
   -i INPUT     Input csv file containing taxonomy ids.
   -e EMAIL     Email for accessing Entrez.
   -o OUTPUT    Output directory for storing the fasta files.
-  --store-all  Download just one strain.
+  --store-all  Download all strains.
 ~~~
 
 Inspect [this](features/usage.feature) file for example usage.

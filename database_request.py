@@ -50,7 +50,7 @@ def parse_arguments(args):
     parser.add_argument('-e', dest='email', help='Email for accessing Entrez.', required=True)
     parser.add_argument('-o', dest='output', help='Output directory for storing the fasta files.',
                         required=True, type=is_valid_path)
-    parser.add_argument('--store-all', dest='store_all', help='Download just one strain.',
+    parser.add_argument('--store-all', dest='store_all', help='Download all strain.',
                         action='store_true', required=False, default=False)
     return parser.parse_args(args)
 
