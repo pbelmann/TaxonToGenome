@@ -74,4 +74,18 @@ optional arguments:
   --store-all  Download all strains.
 ~~~
 
+On a successful run the following folder structure will be created inside the output directory:
+
+~~~BASH
+output/taxonomy_id/genome_id/nuccore_id.fasta
+~~~
+
+For example
+
+~~~BASH
+output/926566/3572/390955930.fasta
+output/926566/3572/390410848.fasta
+output/1198114/13764/322836736.fasta
+~~~
+
 Inspect [this](features/usage.feature) file for example usage.
