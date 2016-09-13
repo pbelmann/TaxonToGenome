@@ -46,7 +46,13 @@ behave
 
 ### Without virtualenv
 
-Install all libraries with
+1.Fetch the repository 
+
+~~~Bash
+wget https://github.com/pbelmann/TaxonToGenome.git && cd TaxonToGenome
+~~~
+
+2.Install all libraries with
 
 ~~~BASH
 pip install -r requirements.txt
