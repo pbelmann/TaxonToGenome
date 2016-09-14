@@ -15,7 +15,7 @@ This script should allow to download ncbi genomes by providing taxon ids.
 1.Fetch the repository 
 
 ~~~Bash
-wget https://github.com/pbelmann/TaxonToGenome.git && cd TaxonToGenome
+wget https://github.com/pbelmann/TaxonToGenome/archive/master.zip && unzip master.zip && cd TaxonToGenome-master
 ~~~
 
 2.Install python 3.4
@@ -49,7 +49,7 @@ behave
 1.Fetch the repository 
 
 ~~~Bash
-wget https://github.com/pbelmann/TaxonToGenome.git && cd TaxonToGenome
+wget https://github.com/pbelmann/TaxonToGenome/archive/master.zip && unzip master.zip && cd TaxonToGenome-master
 ~~~
 
 2.Install all libraries with
