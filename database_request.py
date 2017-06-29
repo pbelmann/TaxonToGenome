@@ -64,8 +64,8 @@ def main(argv):
     genome_ids = search_taxonomy_ids(tax_ids)
 
     pp = pprint.PrettyPrinter(indent=4)
-
-    filtered_genome_ids = dict(map(lambda x: (x["IdList"][0], x["LinkSetDb"][0]["Link"][0]["Id"]), genome_ids))
+    genome_ids_with_link = list(filter(lambda x: x["LinkSetDb"], genome_ids))
+    filtered_genome_ids = dict(map(lambda x: (x["IdList"][0], x["LinkSetDb"][0]["Link"][0]["Id"]), genome_ids_with_link))
 
     print("\nFound the following tax ids - genome ids")
     pp.pprint(filtered_genome_ids)
@@ -76,7 +76,8 @@ def main(argv):
     print("\nFound the following genome ids - nuccore ids")
     pp.pprint(filtered_nuccore_ids)
 
-    for tax_id in tax_ids:
+    filtered_tax_ids = list(filter(lambda x: x in filtered_genome_ids,tax_ids))
+    for tax_id in filtered_tax_ids:
         #genome id has a one to one relation to taxId
         genome_id = filtered_genome_ids[tax_id]
         nuccore_id_list = filtered_nuccore_ids[genome_id]
